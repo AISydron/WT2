@@ -1,0 +1,17 @@
+{
+  "name": "kairos",
+  "version": "1.0.0",
+  "description": "ez better study planner",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "kairos": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Andre",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
