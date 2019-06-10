@@ -1,0 +1,31 @@
+
+  
+    
+    .elements {
+      float: left;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+ 
+    
+    .neutral {
+      margin: 10px 0 0 10px;
+      width:100%;
+      float: left;  
+    }
+
+    .logedIn {
+      visibility: hidden;
+    }
+
+    .fail {
+      background-color: red;
+      float: left;
+      margin-left: 0px;
+      margin-top: 0px;
+      display: none;
+    }
+
+    .failed {
+      visibility: hidden;
+    }
