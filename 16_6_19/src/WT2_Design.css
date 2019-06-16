@@ -1,0 +1,158 @@
+body{
+	background-image: linear-gradient(to top, red 0%, white 90%);
+	height:695px;
+	width:100%;
+	margin:0px;
+}
+
+#button-Stundenplan{
+	/*Form*/
+	background:url(./StundenplanBild.PNG);
+	position: absolute;
+	top:25%;
+	left:10%;
+	width:33%;
+	height:15%;
+	border-radius:20px;
+	
+	/*Schrift  */
+	font-size: 30px;
+
+}
+
+#button-Lernraeume{
+	/*Form*/
+	background:url(./Lernraum.PNG);
+	position: absolute;
+	top:25%;
+	right:10%;
+	width:33%;
+	height:15%;
+	border-radius:20px;
+	
+	/*Schrift  */
+	font-size: 30px;
+	
+}
+
+#button-Prof_Bereich{
+	/*Form*/
+	background:url(./ProffessorBild.PNG);
+	position: absolute;
+	bottom:25%;
+	left:10%;
+	width:33%;
+	height:15%;
+	border-radius:20px;
+	
+	/*Schrift  */
+	font-size: 30px;
+}
+
+#button-Ausfall{
+	/*Form*/
+	background:url(./AusfallBild.PNG);
+	position: absolute;
+	bottom:25%;
+	right:10%;
+	width:33%;
+	height:15%;
+	border-radius:20px;
+	
+	/*Schrift  */
+	font-size: 30px;
+}
+
+/*
+
+#bild1{
+	width:50%;
+	height:70px;
+}
+
+
+
+#stundenplanbild{
+	width:100%;
+	height:100%;
+	border-radius:20px;
+
+}
+#stundenplanschrift{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0%;
+	text-align: center;
+	
+}
+#stundenplanbadge{
+	position: absolute;
+	top:25%;
+	left:10%;
+	width:33%;
+	height:10%;
+
+}
+#lernraumbild{
+	width:100%;
+	height:100%;
+	position: absolute;
+	border-radius: 20px;
+}
+#lernraumschrift{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0%;
+	text-align:center;
+}
+#lernraumbadge{
+	position: absolute;
+	top:25%;
+	right:10%;
+	width:33%;
+	height:10%;
+}
+#ausfallbild{
+	width:100%;
+	height:100%;
+	position: absolute;
+	border-radius: 20px;
+}
+#ausfallschrift{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0%;
+	text-align:center;
+}
+#ausfallbadge{
+	position: absolute;
+	bottom:25%;
+	right:10%;
+	width:33%;
+	height:10%;
+}
+#professorbild{
+	width:100%;
+	height:100%;
+	position:absolute;
+	border-radius: 20px;
+}
+#profschrift{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0%;
+	text-align:center;
+}
+#professorbadge{
+	position: absolute;
+	bottom:25%;
+	left:10%;
+	width:33%;
+	height:10%;
+}
+*/
+

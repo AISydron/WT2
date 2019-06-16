@@ -1,0 +1,88 @@
+#fullTable {
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-image: url(./blabla.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%; 
+   }
+   
+   * {
+   margin: 0;
+   padding: 0;
+   }
+
+   
+   .time {
+   font-family: Verdana;
+   border: 1px;
+   /*font-size:  20%;*/
+   width: 100%;
+   /*font-weight: NULL;*/
+   text-align: center;
+   background-color: transparent;
+   border-color: #315172;
+   }
+
+
+
+tbody {
+    display: table;
+    border: 1px solid black;
+    width: 100%;
+    height: 90%;
+}
+
+#headerRow :first-child {
+    
+}
+
+#headerRow :nth-child(2) {
+    
+}
+
+th {
+    font-family: Lato;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    font-family: Lato;
+    transition: all 0.8s ease;
+}
+
+
+/*das ist neu */
+td:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+
+
+
+
+
+
+
+tr :first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+
+th {
+    font-family: Lato;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#Planner {
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
