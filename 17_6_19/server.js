@@ -54,8 +54,8 @@ app.patch('/safeChanges/', function (req, res, next) {//evtl statt post andere n
   //var user = new User({email: 'wt2@hs-bochum.de', password: '654321', userPlan: [[{id: '1'},{id: '1'},{id: '2'},{id: '2'},{id: '1'},{id: '0'},{id: '1'},{id: '2'},{id: '1'},{id: '0'},{id: '0'},{id: '0'}],[{id: '0'},{id: '1'},{id: '1'},{id: '2'},{id: '2'},{id: '2'},{id: '1'},{id: '1'},{id: '2'},{id: '1'},{id: '0'},{id: '0'}],[{id: '3'},{id: '4'},{id: '2'},{id: '5'},{id: '5'},{id: '5'},{id: '0'},{id: '4'},{id: '4'},{id: '3'},{id: '3'},{id: '1'}],[{id: '5'},{id: '5'},{id: '4'},{id: '4'},{id: '3'},{id: '3'},{id: '2'},{id: '2'},{id: '2'},{id: '2'},{id: '2'},{id: '2'}],[{id: '2'},{id: '2'},{id: '2'},{id: '2'},{id: '2'},{id: '2'},{id: '4'},{id: '4'},{id: '5'},{id: '5'},{id: '0'},{id: '0'}]]});
   //user.save().then(() => console.log('This is done!')).catch(err => console.log(err));
   //var semesterGruppe = new SemesterGruppe({ feacher: [[{id: 1},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0}],[{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0}],[{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0}],[{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0}],[{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0},{id: 0}]]});
-  
-  User.findOneAndUpdate({email: user.email}, {$set:{userPlan: req.body.Profile}, $set:{defaultPlan: req.body.defaultPlan}}, {new: true}, (err, doc) =>{
+  console.log(req.body)
+  User.findOneAndUpdate({email: user.email}, {$set:{userPlan: req.body.Profile}}, {new: true}, (err, doc) =>{
     if (err) {
       console.log("Update fehlgeschlagen!");
     }
@@ -109,7 +109,7 @@ app.post('/login', async function (req, res, next) {
   /*var query  = SemesterGruppe.where({ sid: req.body.defaultPlan});
   var semesterGruppe = await query.findOne();
 
-  //console.log(semesterGruppe);;
+  //console.log(semesterGruppe);
 
 
   if(semesterGruppe != null){
