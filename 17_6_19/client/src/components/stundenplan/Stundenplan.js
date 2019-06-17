@@ -18,7 +18,7 @@ class Stundenplan extends Component {
     ], 
 
     montag: [
-      {stunde:[{fach:'-', id: 0}]},
+      {stunde:[{fach:'-', id: 0},{fach:'-', id: 0}]},
       {stunde:[{fach:'-', id: 0}]},
       {stunde:[{fach:'-', id: 0}]},
       {stunde:[{fach:'-', id: 0}]},
@@ -135,12 +135,13 @@ class Stundenplan extends Component {
   };
 
   handleSafeChanges = () => {
+    console.log(this.state.Profil);
     //console.log("gespeichert")
     //Änderungen werden im DB abgelegt, per login daten
     //  Profile->DB
 
-    const Profile = {Profile: this.state.Profile, defaultPlan: this.state.Benutzer.defaultPlan}
-
+    const Profile = {Profile: this.state.Profil, defaultPlan: this.state.Benutzer.defaultPlan}
+    
     if(this.state.LoggedIn == true){
     (async () => {
       const rawResponse = await fetch('/safeChanges', {
@@ -151,9 +152,9 @@ class Stundenplan extends Component {
         },
         body: JSON.stringify(Profile)
       });
-      //const content = await rawResponse.body
+      const content = await rawResponse.body
     
-      //console.log(content);
+      console.log(content);
     })();
     console.log("Changes Safed")
     }
@@ -302,17 +303,17 @@ class Stundenplan extends Component {
         console.log(this.state.montag[0].stunde[1] = '')
         //this.setState({montag: montag});
         //console.log(this.state.Benutzer);
-
+        
         //user-profil befüllen:
         for(var i=0; i<content.userPlan.length; i++){
           for(var k=0; k<content.userPlan[i].length; k++){
             this.handleProfile(i, k, content.userPlan[i][k].id)
           }
         }
-
+        
         this.loadPlan_fromUser(content);//stundenplan schreiben
       }
-
+      
       this.refs.child.refs.child.tryLogin(content, this.state.Benutzer.email) // Stundenplan->Navigation->Login
       
 
@@ -345,7 +346,7 @@ class Stundenplan extends Component {
 
     //this.handleProfile(0,0,2);
     //this.state.Profil[0].montag[0].id = 'erfolgreich'
-    //console.log(this.state.Profil[0].montag[0].id)
+    
     return (
       <React.Fragment>
         <Navigation           
